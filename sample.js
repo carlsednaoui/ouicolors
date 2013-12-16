@@ -6,7 +6,7 @@ var colors = {
 $.each(colors, function(key, value) {
   var listTitle = document.createElement('h2');
   listTitle.innerHTML = key;
-  $('#colors').append(listTitle);
+  $('#colorList').append(listTitle);
 
   var list = document.createElement('ul');
   $.each(value, function(i, color) {
@@ -16,5 +16,9 @@ $.each(colors, function(key, value) {
     $(item).css({'background-color': '#' + color});
     $(list).append(item);  
   });
-  $('#colors').append(list);
+  $('#colorList').append(list);
+});
+
+$('#toggle').on('click', function() {
+  $('body').toggleClass('light');
 });
