@@ -1,0 +1,37 @@
+body {
+  background-color: #2E4052;
+}
+
+h1 {
+  color: #F0F1F2;
+  text-align: center;
+  margin: 40px;
+}
+
+h2 {
+  color: #F0F1F2;
+  text-transform: capitalize;
+}
+
+ul {
+  max-width: 800px;
+}
+
+li {
+  color: #687685;
+  list-style: none;
+  width: 165px;
+  height: 210px;
+  display: inline-block;
+  margin: 6px;
+  border-radius: 3px;
+}
+
+li p {
+  background-color: #FFFFFF;
+  position: relative;
+  top: 140px;
+  padding: 18px;
+  text-align: center;
+  border-radius: 0 0 3px 3px;
+}
