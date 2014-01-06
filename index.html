@@ -3,6 +3,11 @@
   <head>
     <link rel="stylesheet" href="main.css">
     <script src="jquery.js"></script>
+
+    <!-- use ouibounce -->
+    <script src="ouibounce.js"></script>
+    <link rel="stylesheet" href="ouibounce.css">
+
     <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <title>Carl's Sandbox</title>
@@ -23,6 +28,36 @@
         <li><a href="http://www.google.com/fonts/specimen/PT+Serif">PT Serif</a></li>
         <li><a href="http://www.google.com/fonts/specimen/Source+Sans+Pro">Source Sans Pro</a></li>
       </ul>
+    </div>
+
+    <!-- OuiBounce Modal -->
+    <div class="modal fade" id="ouibounce-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h2>Thank you for stopping by!</h2>
+            <p>If you'd like to stay up to date with my project, sign up for my newsletter. (Awesomeness guaranteed)</p>
+            
+            <!-- MailChimp Signup -->
+            <!-- Begin MailChimp Signup Form -->
+            <div id="mc_embed_signup">
+              <form action="http://carlsednaoui.us3.list-manage1.com/subscribe/post?u=bb49ef46f4b43708a112bbcfc&amp;id=c678155618" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email here">
+                
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_bb49ef46f4b43708a112bbcfc_c678155618" value=""></div>
+                
+                <input type="submit" value="Join The Newsletter &raquo;" name="subscribe" id="mc-embedded-subscribe" class="button">
+              </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">No thanks</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="colors.js"></script>
