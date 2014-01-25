@@ -16,6 +16,12 @@ body {
   color: #2E4052;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid white; 
+}
+
 h1 {
   text-align: center;
   margin: 20px 0 80px 0;
