@@ -34,41 +34,62 @@
       <p>*Voted most popular font of <a href="http://www.typeandgrids.com/blog/the-ten-most-popular-web-fonts-of-2013" target="blank">2013</a></p>
     </div>
 
-    <!-- OuiBounce Modal -->
-    <div class="modal fade" id="ouibounce-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-            <h2>Thank you for stopping by!</h2>
+    <!-- Ouibounce Modal -->
+    <div id="ouibounce-modal">
+      <div class="underlay"></div>
+      <div class="modal">
+        <div class="modal-title">
+          <h3>Thank you for stopping by!</h3>
+        </div>
 
-            <p>Looking to learn about online marketing? Check out <a href="https://www.udemy.com/intro-to-adwords" target="blank">my Adwords Udemy course</a>. Use the code "carl" to get it for free.</p>
+        <div class="modal-body">
+          <p>Looking to learn about online marketing? Check out <a href="https://www.udemy.com/intro-to-adwords" target="blank">my Adwords Udemy course</a>.</p>
 
-            <p>If you'd like to stay up to date with my projects, sign up for the newsletter. (Awesomeness guaranteed)</p>
+          <p>If you'd like to stay up to date with my projects, sign up for the newsletter. (Awesomeness guaranteed)</p>
 
-            <!-- MailChimp Signup -->
-            <!-- Begin MailChimp Signup Form -->
-            <div id="mc_embed_signup">
-              <form action="http://carlsednaoui.us3.list-manage1.com/subscribe/post?u=bb49ef46f4b43708a112bbcfc&amp;id=c678155618" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <!-- MailChimp Signup -->
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+            <form action="http://carlsednaoui.us3.list-manage1.com/subscribe/post?u=bb49ef46f4b43708a112bbcfc&amp;id=c678155618" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email here">
+              <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Enter your email here">
 
-                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                <div style="position: absolute; left: -5000px;"><input type="text" name="b_bb49ef46f4b43708a112bbcfc_c678155618" value=""></div>
+              <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+              <div style="position: absolute; left: -5000px;"><input type="text" name="b_bb49ef46f4b43708a112bbcfc_c678155618" value=""></div>
 
-                <input type="submit" value="Join The Newsletter &raquo;" name="subscribe" id="mc-embedded-subscribe" class="button">
-              </form>
-            </div>
-            <!--End mc_embed_signup-->
+              <input type="submit" value="Join The Newsletter &raquo;" name="subscribe" id="mc-embedded-subscribe" class="button">
+            </form>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">No thanks</button>
-          </div>
+          <!--End mc_embed_signup-->
+        </div>
+
+        <div class="modal-footer">
+          <p>no thanks</p>
         </div>
       </div>
     </div>
 
+
     <script>
-      ouibounce(document.getElementById('ouibounce-modal'), {timer: 0});
+      // if you want to use the 'fire' or 'disable' fn,
+      // you need to save OuiBounce to an object
+      var _ouibounce = ouibounce(document.getElementById('ouibounce-modal'), {
+        aggressive: true,
+        timer: 0,
+        callback: function() { console.log('ouibounce fired!'); }
+      });
+
+      $('body').on('click', function() {
+        $('#ouibounce-modal').hide();
+      });
+
+      $('#ouibounce-modal .modal-footer').on('click', function() {
+        $('#ouibounce-modal').hide();
+      });
+
+      $('#ouibounce-modal .modal').on('click', function(e) {
+        e.stopPropagation();
+      });
     </script>
 
     <script src="colors.js"></script>
